@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import closeIcon from "./cross-svgrepo-com.svg"
 
 interface CustomStyles {
   overlay?: React.CSSProperties;
@@ -61,14 +62,12 @@ export const TintinDuDialog: React.FC<TintinDuDialogProps> = ({
             onClick={onClose}
           />
         ) : (
-          <input
-            type="button"
-            className="modal-close-icon"
-            value="Close"
-            onClick={onClose}
-          >
-            ✕
-          </input>
+          <img
+          src={closeIcon}
+          className="modal-close"
+          alt="Close"
+          onClick={onClose}
+        />
         )}
       </div>
     </div>
